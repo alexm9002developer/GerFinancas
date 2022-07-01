@@ -1,0 +1,71 @@
+﻿@model IEnumerable<GerFinancas.Models.Cartoes>
+
+@{
+    ViewData["Title"] = "Cartões";
+}
+
+<h1>Cadastro de Cartões</h1>
+
+<p>
+    <a asp-controller="Cartoes" asp-action="Criar" class="btn btn-primary">Inserir novo cartão</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <!--<th>
+                Código
+            </th>-->
+            <th>
+                Descrição
+            </th>
+            <th>
+                Limite
+            </th>
+            <th>
+                Dia do Vencimento
+            </th>
+            <th>
+                Melhor dia de Compra
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <!--<td>
+                    @Html.DisplayFor(modelItem => item.Codigo)
+                </td>-->
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Limite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaVencimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MelhorDiaCompra)
+                </td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@item.Codigo">Alterar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Codigo">Visualizar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Codigo">Excluir</a>
+                </td>
+                <!--
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
+</div>

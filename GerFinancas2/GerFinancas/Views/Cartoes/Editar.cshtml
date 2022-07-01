@@ -1,0 +1,51 @@
+﻿@model GerFinancas.Models.ViewModels.CartoesFormViewModel
+
+@{
+    ViewData["Title"] = "Editar Cartões";
+}
+
+<h1>Editar Cartões</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Editar">
+            <input type="hidden" asp-for="Cartoes.Codigo" />
+            <!--<div asp-validation-summary="ModelOnly" class="text-danger"></div>-->
+            <div class="form-group">
+                <label asp-for="Cartoes.Codigo" class="control-label"></label>
+                <input asp-for="Cartoes.Codigo" class="form-control" />
+                <span asp-validation-for="Cartoes.Codigo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cartoes.Descricao" class="control-label"></label>
+                <input asp-for="Cartoes.Descricao" class="form-control" />
+                <span asp-validation-for="Cartoes.Descricao" class="text-danger"></span>
+                <small class="form-text text-muted">Seus dados estão seguros, e nunca serão compartilhados.</small>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cartoes.Limite" class="control-label"></label>
+                <input asp-for="Cartoes.Limite" class="form-control" />
+                <span asp-validation-for="Cartoes.Limite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cartoes.DiaVencimento" class="control-label"></label>
+                <input asp-for="Cartoes.DiaVencimento" class="form-control" />
+                <span asp-validation-for="Cartoes.DiaVencimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cartoes.MelhorDiaCompra" class="control-label"></label>
+                <input asp-for="Cartoes.MelhorDiaCompra" class="form-control" />
+                <span asp-validation-for="Cartoes.MelhorDiaCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a class="btn btn-secondary" asp-controller="Cartoes" asp-action="Index" role="button">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
