@@ -1,22 +1,22 @@
 ﻿@model GerFinancas.Models.ViewModels.CartoesFormViewModel
 
 @{
-    ViewData["Title"] = "Editar Cartões";
+    ViewData["Title"] = "Editar Cartão";
 }
 
-<h1>Editar Cartões</h1>
+<h1>Editar Cartão</h1>
 
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Editar">
             <input type="hidden" asp-for="Cartoes.Codigo" />
-            <!--<div asp-validation-summary="ModelOnly" class="text-danger"></div>-->
+            <!--<div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Cartoes.Codigo" class="control-label"></label>
                 <input asp-for="Cartoes.Codigo" class="form-control" />
                 <span asp-validation-for="Cartoes.Codigo" class="text-danger"></span>
-            </div>
+            </div>-->
             <div class="form-group">
                 <label asp-for="Cartoes.Descricao" class="control-label"></label>
                 <input asp-for="Cartoes.Descricao" class="form-control" />
