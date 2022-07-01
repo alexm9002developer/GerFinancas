@@ -50,9 +50,9 @@
                     @Html.DisplayFor(modelItem => item.MelhorDiaCompra)
                 </td>
                 <td>
-                    <a asp-action="Editar" asp-route-id="@item.Codigo">Alterar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Codigo">Visualizar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Codigo">Excluir</a>
+                    <a asp-controller="Cartoes" asp-action="Alterar" asp-route-Codigo="@item.Codigo">Alterar</a> |
+                    <a asp-controller="Cartoes" asp-action="Visualizar" asp-route-Codigo="@item.Codigo">Visualizar</a> |
+                    <a asp-controller="Cartoes" asp-action="Apagar" asp-route-Codigo="@item.Codigo">Excluir</a>
                 </td>
                 <!--
                 <td>

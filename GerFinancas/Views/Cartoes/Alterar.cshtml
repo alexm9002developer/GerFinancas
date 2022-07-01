@@ -1,30 +1,25 @@
 ﻿@model GerFinancas.Models.Cartoes
-
 @{
-    ViewData["Title"] = "Cadastrar novo cartão";
+    ViewData["Title"] = "Alterar Cartão";
 }
 
-<h1>Cadastrar novo cartão</h1>
+<h1>Alterar Cartão</h1>
 
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-controller="Cartoes" asp-action="Criar" method="post">
+        <form asp-controller="Cartoes" asp-action="Alterar" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <!--<div class="form-group">
-                <label asp-for="Codigo" class="control-label"></label>
-                <input asp-for="Codigo" class="form-control" />
-                <span asp-validation-for="Codigo" class="text-danger"></span>
-            </div>-->
+            <input type="hidden" asp-for="Codigo" />
             <div class="form-group">
                 <label asp-for="Descricao" class="control-label"></label>
-                <input type="text" class="form-control" placeholder="Digite a Descrição" />
+                <input type="text" asp-for="Descricao" class="form-control" />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
                 <small class="form-text text-muted">Seus dados estão seguros, e nunca serão compartilhados.</small>
             </div>
             <div class="form-group">
                 <label asp-for="Limite" class="control-label"></label>
-                <input asp-for="Limite" class="form-control" placeholder="Entre com o limite do cartão" />
+                <input asp-for="Limite" class="form-control" />
                 <span asp-validation-for="Limite" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -44,7 +39,6 @@
         </form>
     </div>
 </div>
-
 
 
 @section Scripts {

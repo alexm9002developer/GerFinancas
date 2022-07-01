@@ -1315,3 +1315,4 @@ D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\ref\GerFinancas.dll
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.pdb
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.genruntimeconfig.cache
+D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Alterar.cshtml.g.cs
