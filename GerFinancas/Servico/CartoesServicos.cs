@@ -37,6 +37,7 @@ namespace GerFinancas.Servico
             Cartoes CartaoDB = ListarPorCodigo(cartoes.Codigo);
             if (CartaoDB == null) throw new SystemException("Ocorreu um erro na alteração do cartão!");
             CartaoDB.Descricao = cartoes.Descricao;
+            CartaoDB.Limite = cartoes.Limite;
             CartaoDB.DiaVencimento = cartoes.DiaVencimento;
             CartaoDB.MelhorDiaCompra = cartoes.MelhorDiaCompra;
             _gerFinancasContext.Cartoes.Update(CartaoDB);
