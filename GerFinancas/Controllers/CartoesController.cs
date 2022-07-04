@@ -30,9 +30,15 @@ namespace GerFinancas.Controllers
             Cartoes cartoes = _cartoesServicos.ListarPorCodigo(codigo);
             return View(cartoes);
         }
-        public IActionResult Apagar()
+        public IActionResult ApagarConfirma(int codigo)
         {
-            return View();
+            _cartoesServicos.Apagar(codigo);
+            return RedirectToAction("index");
+        }
+        public IActionResult Apagar(int codigo)
+        {
+            Cartoes cartoes = _cartoesServicos.ListarPorCodigo(codigo);
+            return View(cartoes);
         }
 
         [HttpPost]

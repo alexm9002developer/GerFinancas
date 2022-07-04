@@ -1293,7 +1293,6 @@ D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.TagHelpers.output.cache
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.RazorCoreGenerate.cache
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Criar.cshtml.g.cs
-D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Editar.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Index.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Home\Contato.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
@@ -1316,3 +1315,4 @@ D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\ref\GerFinan
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.pdb
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.genruntimeconfig.cache
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Alterar.cshtml.g.cs
+D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Apagar.cshtml.g.cs

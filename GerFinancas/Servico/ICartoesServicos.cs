@@ -13,5 +13,6 @@ namespace GerFinancas.Servico
         List<Cartoes> BuscarTodos();
         Cartoes Adicionar(Cartoes cartoes);
         Cartoes Atualizar(Cartoes cartoes);
+        bool Apagar(int codigo);
     }
 }

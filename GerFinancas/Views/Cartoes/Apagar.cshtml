@@ -1,0 +1,44 @@
+﻿@model GerFinancas.Models.Cartoes
+
+@{
+    ViewData["Title"] = "Excluir Cartão";
+}
+
+<h1>Excluir Cartão</h1>
+
+<h3>Deseja realmente excluir (@Model.Descricao)?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Limite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Limite)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DiaVencimento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DiaVencimento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MelhorDiaCompra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MelhorDiaCompra)
+        </dd>
+    </dl>
+    
+    <form asp-controller="Cartoes" asp-action="ApagarConfirma" method="post">
+        <input type="hidden" asp-for="Codigo" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a class="btn btn-secondary" asp-controller="Cartoes" asp-action="Index" role="button">Voltar</a>
+    </form>
+</div>

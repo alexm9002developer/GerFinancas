@@ -44,5 +44,14 @@ namespace GerFinancas.Servico
             _gerFinancasContext.SaveChanges();
             return CartaoDB;
         }
+
+        public bool Apagar(int codigo)
+        {
+            Cartoes cartaoDB = ListarPorCodigo(codigo);
+            if (cartaoDB == null) throw new SystemException("Ocorreu um erro na exclusão do cartão!");
+            _gerFinancasContext.Cartoes.Remove(cartaoDB);
+            _gerFinancasContext.SaveChanges();
+            return true;
+        }
     }
 }
