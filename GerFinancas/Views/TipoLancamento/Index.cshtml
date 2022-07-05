@@ -7,46 +7,21 @@
 <h1>Tipo de Lançamento</h1>
 
 <p>
-    <a asp-controller="TipoLancamento" asp-action="Criar" class="btn btn-primary">Inserir novo</a>
+    <a asp-controller="TipoLancamento" asp-action="Criar" class="btn btn-primary">Inserir novo tipo de lançamento</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Código
-            </th>
-            <th>
-               Descrição
+                Descrição
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Codigo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                <a asp-action="Editar" asp-route-id="@item.Codigo">Alterar</a> |
-                <a asp-action="Details" asp-route-id="@item.Codigo">Visualizar</a> |
-                <a asp-action="Apagar" asp-route-id="@item.Codigo">Excluir</a>
-            </td>
-            <!--
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-            -->
-        </tr>
-}
+       
     </tbody>
 </table>
-
 <div>
     <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
 </div>

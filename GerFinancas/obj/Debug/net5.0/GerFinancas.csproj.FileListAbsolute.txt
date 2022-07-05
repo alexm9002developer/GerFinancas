@@ -1303,7 +1303,6 @@ D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\TipoLancamento\Apagar.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\TipoLancamento\Criar.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\TipoLancamento\Editar.cshtml.g.cs
-D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\TipoLancamento\Index.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.RazorTargetAssemblyInfo.cache
@@ -1316,3 +1315,4 @@ D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.genruntimeconfig.cache
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Alterar.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Apagar.cshtml.g.cs
+D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\TipoLancamento\Index.cshtml.g.cs

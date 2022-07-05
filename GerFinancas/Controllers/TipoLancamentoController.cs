@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GerFinancas.Models;
+using GerFinancas.Servico;
+
 
 namespace GerFinancas.Controllers
 {
@@ -11,12 +13,7 @@ namespace GerFinancas.Controllers
     {
         public IActionResult Index()
         {
-            List<TipoLancamento> lista = new List<TipoLancamento>();
-
-            lista.Add(new TipoLancamento() { Codigo = 1, Descricao = "Fixo" });
-            lista.Add(new TipoLancamento() { Codigo = 2, Descricao = "Variável" });
-
-            return View(lista);
+            return View();
         }
         public IActionResult Criar()
         {
