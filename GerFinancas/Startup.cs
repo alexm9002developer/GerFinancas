@@ -32,6 +32,7 @@ namespace GerFinancas
             .AddDbContext<GerFinancasContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DataBase")));
             //Linhas 30 e 31 configuram a comunicação com o servidor.
             services.AddScoped<ICartoesServicos, CartoesServico>();
+            services.AddScoped<ITipoLancamentoServicos, TipoLancamentoServicos>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
