@@ -12,5 +12,6 @@ namespace GerFinancas.Servico
         List<TipoLancamento> BuscarTodos();
         TipoLancamento Adicionar(TipoLancamento tipoLancamento);
         TipoLancamento Atualizar(TipoLancamento tipoLancamento);
+        bool Apagar(int codigo);
     }
 }

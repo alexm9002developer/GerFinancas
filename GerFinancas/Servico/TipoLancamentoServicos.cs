@@ -34,12 +34,21 @@ namespace GerFinancas.Servico
         public TipoLancamento Atualizar(TipoLancamento tipoLancamento)
         {
             // Gravar no banco de dados
-            TipoLancamento TipoLancamentoDB = ListarTipoPorCodigo(tipoLancamento.Codigo);
-            if (TipoLancamentoDB == null) throw new SystemException("Ocorreu um erro na alteraçãol do tipo!");
-            TipoLancamentoDB.Descricao = tipoLancamento.Descricao;
-            _gerFinancasContext.TipoLancamento.Update(TipoLancamentoDB);
+            TipoLancamento tipoLancamentoDB = ListarTipoPorCodigo(tipoLancamento.Codigo);
+            if (tipoLancamentoDB == null) throw new SystemException("Ocorreu um erro na alteração!");
+            tipoLancamentoDB.Descricao = tipoLancamento.Descricao;
+            _gerFinancasContext.TipoLancamento.Update(tipoLancamentoDB);
             _gerFinancasContext.SaveChanges();
-            return TipoLancamentoDB;
+            return tipoLancamentoDB;
+        }
+
+        public bool Apagar(int codigo)
+        {
+            TipoLancamento tipoLancamentoDB = ListarTipoPorCodigo(codigo);
+            if (tipoLancamentoDB == null) throw new SystemException("Ocorreu um erro na exclusão!");
+            _gerFinancasContext.TipoLancamento.Remove(tipoLancamentoDB);
+            _gerFinancasContext.SaveChanges();
+            return true;
         }
     }
 }

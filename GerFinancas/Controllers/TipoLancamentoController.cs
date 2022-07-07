@@ -31,9 +31,15 @@ namespace GerFinancas.Controllers
             TipoLancamento tipoLancamento = _tipoLancamentoServicos.ListarTipoPorCodigo(codigo);
             return View(tipoLancamento);
         }
-        public IActionResult Apagar()
+        public IActionResult Apagar(int codigo)
         {
-            return View();
+            TipoLancamento tipoLancamento = _tipoLancamentoServicos.ListarTipoPorCodigo(codigo);
+            return View(tipoLancamento);
+        }
+        public IActionResult ApagarConfirma(int codigo)
+        {
+            _tipoLancamentoServicos.Apagar(codigo);
+            return RedirectToAction("Index");
         }
         /*
         [HttpPost]

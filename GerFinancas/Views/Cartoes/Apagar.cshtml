@@ -36,9 +36,9 @@
         </dd>
     </dl>
     
-    <form asp-controller="Cartoes" asp-action="ApagarConfirma" method="post">
+    <form asp-controller="Cartoes" asp-action="ApagarConfirma" asp-route-Codigo="@Model.Codigo" method="post">
         <input type="hidden" asp-for="Codigo" />
         <input type="submit" value="Excluir" class="btn btn-danger" />
-        <a class="btn btn-secondary" asp-controller="Cartoes" asp-action="Index" role="button">Voltar</a>
+        <a class="btn btn-secondary" asp-controller="Cartoes" asp-action="Index" role="button">Cancelar</a>
     </form>
 </div>
