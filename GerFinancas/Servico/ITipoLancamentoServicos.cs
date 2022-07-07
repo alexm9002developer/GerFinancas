@@ -8,6 +8,9 @@ namespace GerFinancas.Servico
 {
     public interface ITipoLancamentoServicos
     {
+        TipoLancamento ListarTipoPorCodigo(int Codigo);
+        List<TipoLancamento> BuscarTodos();
         TipoLancamento Adicionar(TipoLancamento tipoLancamento);
+        TipoLancamento Atualizar(TipoLancamento tipoLancamento);
     }
 }

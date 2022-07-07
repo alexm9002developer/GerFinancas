@@ -7,21 +7,33 @@
 <h1>Tipo de Lançamento</h1>
 
 <p>
-    <a asp-controller="TipoLancamento" asp-action="Criar" class="btn btn-primary">Inserir novo tipo de lançamento</a>
+    <a asp-controller="TipoLancamento" asp-action="Criar" class="btn btn-primary">Inserir novo tipo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                Descrição
+               Descrição
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-       
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                <a asp-controller="TipoLancamento" asp-action="Editar" asp-route-Codigo="@item.Codigo">Alterar</a> |
+                <a asp-controller="TipoLancamento" asp-action="Detalhes" asp-route-Codigo="@item.Codigo">Visualizar</a> |
+                <a asp-controller="TipoLancamento" asp-action="Apagar" asp-route-Codigo="@item.Codigo">Excluir</a>
+            </td>
+        </tr>
+}
     </tbody>
 </table>
+
 <div>
     <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
 </div>

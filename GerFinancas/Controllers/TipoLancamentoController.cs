@@ -19,25 +19,47 @@ namespace GerFinancas.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            List<TipoLancamento> lista = _tipoLancamentoServicos.BuscarTodos();
+            return View(lista);
         }
         public IActionResult Criar()
         {
             return View();
         }
-        public IActionResult Editar()
+        public IActionResult Editar(int codigo)
         {
-            return View();
+            TipoLancamento tipoLancamento = _tipoLancamentoServicos.ListarTipoPorCodigo(codigo);
+            return View(tipoLancamento);
         }
         public IActionResult Apagar()
         {
             return View();
         }
+        /*
         [HttpPost]
         public IActionResult Criar(TipoLancamento tipoLancamento)
         {
             _tipoLancamentoServicos.Adicionar(tipoLancamento);
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public IActionResult Alterar(TipoLancamento tipoLancamento)
+        {
+            _tipoLancamentoServicos.Atualizar(tipoLancamento);
+            return RedirectToAction("index");
+        }*/
+        [HttpPost]
+        public IActionResult Salvar(TipoLancamento tipoLancamento)
+        {
+            if (tipoLancamento.Codigo == 0)
+            {
+                _tipoLancamentoServicos.Adicionar(tipoLancamento);
+            }
+            else
+            {
+                _tipoLancamentoServicos.Atualizar(tipoLancamento);
+            }
+            return RedirectToAction("index");
         }
     }
 }
