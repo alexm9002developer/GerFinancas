@@ -14,7 +14,9 @@ namespace GerFinancas.Data
         }
         public DbSet<Cartoes> Cartoes { get; set; }
         public DbSet<TipoLancamento> TipoLancamento { get; set; }
+        public DbSet<FormatoLancamento> FormatoLancamentos { get; set; }
         public DbSet<Lancamentos> Lancamentos { get; set; }
+       
         // public DbSet<Login> Login { get; set; }
     }
 }

@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace GerFinancas.Models
 {
-    public class TipoLancamento
+    public class FormatoLancamento
     {
         [Key]
-        [Display(Name = "Código")]
+        [Display (Name = "Código")]
         public int Codigo { get; set; }
 
-        [Display(Name = "Descrição")]
-        [Required(ErrorMessage = "Informe a descrição!")]
-        public String Descricao { get; set; }
+        [Display (Name = "Descrição")]
+        [Required (ErrorMessage = "Informe a descrição")]
+        public string Descricao { get; set; }
 
-        public TipoLancamento()
+        public FormatoLancamento()
         {
 
         }
 
-        public TipoLancamento(int codigo, string descricao)
+        public FormatoLancamento(int codigo, string descricao)
         {
             this.Codigo = codigo;
             this.Descricao = descricao;

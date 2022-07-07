@@ -1,0 +1,27 @@
+﻿@model IEnumerable<GerFinancas.Models.FormatoLancamento>
+
+@{
+    ViewData["Title"] = "Formatos de Lançamento";
+}
+
+<h1>Formatos de Lançamento</h1>
+
+<p>
+    <a asp-controller="FormatoLancamento" asp-action="Criar" class="btn btn-primary">Inserir novo formato</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Descrição
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+<div>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
+</div>

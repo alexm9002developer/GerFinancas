@@ -1316,3 +1316,4 @@ D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\GerFinancas.
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Alterar.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Cartoes\Apagar.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\TipoLancamento\Index.cshtml.g.cs
+D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\FormatoLancamento\Index.cshtml.g.cs
