@@ -35,7 +35,7 @@ namespace GerFinancas.Servico
         {
             // Gravar no banco de dados
             TipoLancamento tipoLancamentoDB = ListarTipoPorCodigo(tipoLancamento.Codigo);
-            if (tipoLancamentoDB == null) throw new SystemException("Ocorreu um erro na alteração!");
+            if (tipoLancamentoDB == null) throw new SystemException("Ocorreu um erro na operação!");
             tipoLancamentoDB.Descricao = tipoLancamento.Descricao;
             _gerFinancasContext.TipoLancamento.Update(tipoLancamentoDB);
             _gerFinancasContext.SaveChanges();

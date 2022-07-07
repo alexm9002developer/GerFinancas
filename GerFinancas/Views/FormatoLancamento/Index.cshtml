@@ -13,13 +13,24 @@
     <thead>
         <tr>
             <th>
-                Descrição
+               Descrição
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                <a asp-controller="FormatoLancamento" asp-action="Editar" asp-route-Codigo="@item.Codigo">Alterar</a> |
+                <a asp-controller="FormatoLancamento" asp-action="Visualizar" asp-route-Codigo="@item.Codigo">Visualizar</a> |
+                <a asp-controller="FormatoLancamento" asp-action="Apagar" asp-route-Codigo="@item.Codigo">Excluir</a>
+            </td>
+        </tr>
+}
     </tbody>
 </table>
 <div>

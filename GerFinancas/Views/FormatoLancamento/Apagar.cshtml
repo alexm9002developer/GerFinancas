@@ -1,0 +1,26 @@
+﻿@model GerFinancas.Models.FormatoLancamento
+
+@{
+    ViewData["Title"] = "Exclusão de Formato de Lançamento";
+}
+
+<h1>Exclusão de Formato de Lançamento</h1>
+
+<h3>Deseja mesmo excluir (@Model.Descricao)?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Descrição
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+    </dl>
+
+    <form asp-controller="FormatoLancamento" asp-action="ApagarConfirma" method="post">
+        <input type="hidden" asp-for="Codigo" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a class="btn btn-secondary" asp-controller="FormatoLancamento" asp-action="Index" role="button">Cancelar</a>
+    </form>
+</div>
