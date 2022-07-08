@@ -44,8 +44,12 @@ namespace GerFinancas.Controllers
         [HttpPost]
         public IActionResult Criar(Cartoes cartoes)
         {
-            _cartoesServicos.Adicionar(cartoes);
-            return RedirectToAction("index");
+            if (ModelState.IsValid)
+            {
+                _cartoesServicos.Adicionar(cartoes);
+                return RedirectToAction("index");
+            }
+            return View(cartoes);
         }
         [HttpPost]
         public IActionResult Alterar(Cartoes cartoes)
