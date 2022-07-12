@@ -41,16 +41,32 @@ namespace GerFinancas.Controllers
             return View(cartoes);
         }
 
-        [HttpPost]
-        public IActionResult Criar(Cartoes cartoes)
+        /*[HttpPost]
+        public IActionResult Salvar(Cartoes cartoes)
         {
             if (ModelState.IsValid)
             {
                 _cartoesServicos.Adicionar(cartoes);
-                return RedirectToAction("index");
+                return RedirectToAction("Index");
             }
             return View(cartoes);
+        }*/
+
+        [HttpPost]
+        public IActionResult Salvar(Cartoes cartoes)
+        {
+            if (cartoes.Codigo == 0)
+            {
+                _cartoesServicos.Adicionar(cartoes);
+            }
+            else
+            {
+                _cartoesServicos.Atualizar(cartoes);
+            }
+            return RedirectToAction("index");
         }
+
+
         [HttpPost]
         public IActionResult Alterar(Cartoes cartoes)
         {
