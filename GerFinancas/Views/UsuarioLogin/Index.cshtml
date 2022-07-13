@@ -1,0 +1,83 @@
+﻿@model IEnumerable<GerFinancas.Models.UsuarioLogin>
+
+@{
+    ViewData["Title"] = "Cadastro de Usuários";
+}
+
+<h1>Cadastro de Usuários</h1>
+
+<p>
+    <a asp-controller="UsuarioLogin" asp-action="Criar" class="btn btn-primary">Inserir novo Usuário</a>
+</p>
+<table id="TableUsuario" class="table">
+    <thead>
+        <tr>
+            <th>
+                Usuário
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Perfil)
+            </th>
+            <th>
+                Data de Cadastro
+            </th>
+            <th>
+                Data de Alteração
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Login)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Senha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Perfil)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataCadastro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataAlteracao)
+                    </td>
+                    <td>
+                        <a asp-controller="UsuarioLogin" asp-action="Editar" asp-route-Codigo="@item.Codigo">Alterar</a> |
+                        <a asp-controller="UsuarioLogin" asp-action="Detalhes" asp-route-Codigo="@item.Codigo">Visualizar</a> |
+                        <a asp-controller="UsuarioLogin" asp-action="Apagar" asp-route-Codigo="@item.Codigo">Excluir</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+            {
+                <tr class="odd"><td valign="top" colspan="5">Nenhum usuário encontrado!</td></tr>
+            }
+    </tbody>
+</table>
+
+<div>
+    <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
+</div>

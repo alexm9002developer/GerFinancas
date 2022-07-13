@@ -112,6 +112,43 @@ namespace GerFinancas.Migrations
                     b.ToTable("TipoLancamento");
                 });
 
+            modelBuilder.Entity("GerFinancas.Models.UsuarioLogin", b =>
+                {
+                    b.Property<int>("Codigo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DataCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Perfil")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Codigo");
+
+                    b.ToTable("UsuarioLogin");
+                });
+
             modelBuilder.Entity("GerFinancas.Models.Lancamentos", b =>
                 {
                     b.HasOne("GerFinancas.Models.TipoLancamento", "Tipo")

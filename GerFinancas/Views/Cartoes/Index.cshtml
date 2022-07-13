@@ -32,38 +32,46 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @if (Model != null && Model.Any())
         {
-            <tr>
-                <!--<td>
-                    @Html.DisplayFor(modelItem => item.Codigo)
-                </td>-->
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Limite)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DiaVencimento)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MelhorDiaCompra)
-                </td>
-                <td>
-                    <a asp-controller="Cartoes" asp-action="Alterar" asp-route-Codigo="@item.Codigo">Alterar</a> |
-                    <a asp-controller="Cartoes" asp-action="Visualizar" asp-route-Codigo="@item.Codigo">Visualizar</a> |
-                    <a asp-controller="Cartoes" asp-action="Apagar" asp-route-Codigo="@item.Codigo">Excluir</a>
-                </td>
-                <!--
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
-                -->
-            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <!--<td>
+                        @Html.DisplayFor(modelItem => item.Codigo)
+                    </td>-->
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Limite)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DiaVencimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MelhorDiaCompra)
+                    </td>
+                    <td>
+                        <a asp-controller="Cartoes" asp-action="Alterar" asp-route-Codigo="@item.Codigo">Alterar</a> |
+                        <a asp-controller="Cartoes" asp-action="Visualizar" asp-route-Codigo="@item.Codigo">Visualizar</a> |
+                        <a asp-controller="Cartoes" asp-action="Apagar" asp-route-Codigo="@item.Codigo">Excluir</a>
+                    </td>
+                    <!--
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                    -->
+                </tr>
+            }
         }
+        else
+        {
+            <tr class="odd"><td valign="top" colspan="5">Nenhum cartão encontrado!</td></tr>
+        }
+
     </tbody>
 </table>
 
