@@ -5,7 +5,10 @@
 
 $(document).ready(function () {
     getDataTable('#TableCartoes');
-    getDataTable('#TableUsuario')
+    getDataTable('#TableUsuario');
+    getDataTable('#TableFormatoLancamento');
+    getDataTable('#TableTipoLancamento');
+
 });
 function getDataTable(id) {
     $(id).DataTable({
