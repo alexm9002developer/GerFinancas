@@ -22,16 +22,13 @@
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Senha)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Perfil)
             </th>
             <th>
                 Data de Cadastro
             </th>
             <th>
-                Data de Alteração
+                Data da última alteração
             </th>
             <th></th>
         </tr>
@@ -52,9 +49,6 @@
                         @Html.DisplayFor(modelItem => item.Email)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Senha)
-                    </td>
-                    <td>
                         @Html.DisplayFor(modelItem => item.Perfil)
                     </td>
                     <td>
@@ -72,9 +66,9 @@
             }
         }
         else
-            {
-                <tr class="odd"><td valign="top" colspan="5">Nenhum usuário encontrado!</td></tr>
-            }
+        {
+            <tr class="odd"><td valign="top" colspan="5">Nenhum usuário encontrado!</td></tr>
+        }
     </tbody>
 </table>
 

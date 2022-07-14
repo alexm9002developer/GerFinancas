@@ -1,11 +1,17 @@
-﻿using System;
+﻿using GerFinancas.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace GerFinancas.Servico
 {
-    interface IUsuarioLoginServicos
+    public interface IUsuarioLoginServicos
     {
+        UsuarioLogin ListarUsuarioPorCodigo(int Codigo);
+        List<UsuarioLogin> BuscarTodos();
+        UsuarioLogin Adicionar(UsuarioLogin usuarioLogin);
+        UsuarioLogin Atualizar(UsuarioLogin usuarioLogin);
+        bool Apagar(int codigo);
     }
 }

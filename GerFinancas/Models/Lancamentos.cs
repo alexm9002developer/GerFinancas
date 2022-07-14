@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using GerFinancas.Models;
-using GerFinancas.Models.Enums;
+using GerFinancas.Enums;
 
 namespace GerFinancas.Models
 {
@@ -16,7 +16,7 @@ namespace GerFinancas.Models
 
         [Display(Name = "Tipo de Lançamento")]
         [Required(ErrorMessage = "Selecione o tipo de Lançamento!")]
-        public ReceitaDespesa ReceitaDespesa { get; set; }
+        public PerfilEnum ReceitaDespesa { get; set; }
 
         [Display(Name = "Formato de Pagamento")]
         [Required(ErrorMessage = "Informe o formato de pagamento!")]
@@ -42,7 +42,7 @@ namespace GerFinancas.Models
         {
 
         }
-        public Lancamentos(int codigo, ReceitaDespesa receitaDespesa, int tipoDoLancamento, double valor, string descricao, DateTime vencimento, DateTime dataLancamento, TipoLancamento tipo)
+        public Lancamentos(int codigo, PerfilEnum receitaDespesa, int tipoDoLancamento, double valor, string descricao, DateTime vencimento, DateTime dataLancamento, TipoLancamento tipo)
         {
             this.Codigo = codigo;
             this.ReceitaDespesa = receitaDespesa;

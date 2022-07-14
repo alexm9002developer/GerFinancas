@@ -16,6 +16,6 @@ namespace GerFinancas.Data
         public DbSet<TipoLancamento> TipoLancamento { get; set; }
         public DbSet<FormatoLancamento> FormatoLancamentos { get; set; }
         public DbSet<Lancamentos> Lancamentos { get; set; }
-        public DbSet<UsuarioLogin> Usuarios { get; set; }
+        public DbSet<UsuarioLogin> UsuarioLogin { get; set; }
     }
 }

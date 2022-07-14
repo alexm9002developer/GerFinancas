@@ -10,9 +10,10 @@ namespace GerFinancas.Models
     public class UsuarioLogin
     {
         [Key]
+        [Display(Name = "Código")]
         public int Codigo { get; set; }
 
-        [Display(Name = "Nome Usuário")]
+        [Display(Name = "Nome do Usuário")]
         [Required(ErrorMessage = "Informe o nome do usuário!")]
         public string Nome { get; set; }
 
@@ -22,15 +23,24 @@ namespace GerFinancas.Models
 
         [Display(Name = "Email")]
         [Required(ErrorMessage = "Informe o email do usuário!")]
+        [EmailAddress(ErrorMessage = "O email informado não é válido")]
         public string Email { get; set; }
 
         [Display(Name = "Senha")]
         [Required(ErrorMessage = "Informe a senha do usuário!")]
         public string Senha { get; set; }
 
+        [Required(ErrorMessage = "Selecione o perfil do usuário!")]
         public PerfilEnum Perfil { get; set; }
-
+       
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataCadastro { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+
+        [Display(Name = "Data de Alteração")]
         public DateTime? DataAlteracao { get; set; }
 
         public UsuarioLogin()
@@ -43,7 +53,7 @@ namespace GerFinancas.Models
             string login, 
             string email, 
             string senha, 
-            PerfilEnum perfil, 
+            PerfilEnum perfil,
             DateTime dataCadastro, 
             DateTime? dataAlteracao)
         {
@@ -56,5 +66,6 @@ namespace GerFinancas.Models
             this.DataCadastro = dataCadastro;
             this.DataAlteracao = dataAlteracao;
         }
+
     }
 }

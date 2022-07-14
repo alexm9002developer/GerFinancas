@@ -8,6 +8,8 @@ namespace GerFinancas.Enums
     public enum PerfilEnum
     {
         Admin = 1,
-        Padrao = 2
+        Padrao = 2,
+        Receita = 3,
+        Despesa = 4
     }
 }
