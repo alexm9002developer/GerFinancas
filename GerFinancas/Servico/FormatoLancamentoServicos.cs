@@ -18,17 +18,17 @@ namespace GerFinancas.Servico
         public FormatoLancamento Adicionar(FormatoLancamento formatoLancamento)
         {
             // Gravar no banco de dados
-            _gerFinancasContext.FormatoLancamentos.Add(formatoLancamento);
+            _gerFinancasContext.FormatoLancamento.Add(formatoLancamento);
             _gerFinancasContext.SaveChanges();
             return formatoLancamento;
         }
         public FormatoLancamento ListarFormatoPorCodigo(int codigo)
         {
-            return _gerFinancasContext.FormatoLancamentos.FirstOrDefault(x => x.Codigo == codigo);
+            return _gerFinancasContext.FormatoLancamento.FirstOrDefault(x => x.Codigo == codigo);
         }
         public List<FormatoLancamento> BuscarTodos()
         {
-            return _gerFinancasContext.FormatoLancamentos.ToList();
+            return _gerFinancasContext.FormatoLancamento.ToList();
         }
         public FormatoLancamento Atualizar(FormatoLancamento formatoLancamento)
         {
@@ -36,7 +36,7 @@ namespace GerFinancas.Servico
             FormatoLancamento formatoLancamentoDB = ListarFormatoPorCodigo(formatoLancamento.Codigo);
             if (formatoLancamentoDB == null) throw new SystemException("Ocorreu um erro na operação!");
             formatoLancamentoDB.Descricao = formatoLancamento.Descricao;
-            _gerFinancasContext.FormatoLancamentos.Update(formatoLancamentoDB);
+            _gerFinancasContext.FormatoLancamento.Update(formatoLancamentoDB);
             _gerFinancasContext.SaveChanges();
             return formatoLancamentoDB;
         }
@@ -45,7 +45,7 @@ namespace GerFinancas.Servico
         {
             FormatoLancamento formatoLancamentoDB = ListarFormatoPorCodigo(codigo);
             if (formatoLancamentoDB == null) throw new SystemException("Ocorreu um erro na exclusão!");
-            _gerFinancasContext.FormatoLancamentos.Remove(formatoLancamentoDB);
+            _gerFinancasContext.FormatoLancamento.Remove(formatoLancamentoDB);
             _gerFinancasContext.SaveChanges();
             return true;
         }

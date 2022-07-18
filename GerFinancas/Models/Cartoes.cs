@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GerFinancas.Models
 {
@@ -14,7 +15,8 @@ namespace GerFinancas.Models
 
         [Display(Name = "Descrição")]
         [Required(ErrorMessage = "Informe a descrição do cartão!")]
-        public String Descricao { get; set; }
+        [Column(TypeName = "varchar(200)")]
+        public string Descricao { get; set; }
 
         [Required(ErrorMessage = "Informe o limite do cartão!")]
         public double Limite { get; set; }

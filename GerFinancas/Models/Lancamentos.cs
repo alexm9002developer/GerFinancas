@@ -36,8 +36,7 @@ namespace GerFinancas.Models
         public DateTime Vencimento { get; set; }
         public DateTime DataLancamento { get; set; }
         public TipoLancamento Tipo { get; set; }
-        public int TipoCodigo { get; set; }
-
+        
         public Lancamentos()
         {
 

@@ -3,14 +3,16 @@ using System;
 using GerFinancas.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GerFinancas.Migrations
 {
     [DbContext(typeof(GerFinancasContext))]
-    partial class GerFinancasContextModelSnapshot : ModelSnapshot
+    [Migration("20220718223508_Criado novo banco MySql")]
+    partial class CriadonovobancoMySql
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,7 +27,7 @@ namespace GerFinancas.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("DiaVencimento")
                         .HasColumnType("int");

@@ -14,7 +14,7 @@ namespace GerFinancas.Models
 
         [Display(Name = "Descrição")]
         [Required(ErrorMessage = "Informe a descrição!")]
-        public String Descricao { get; set; }
+        public string Descricao { get; set; }
 
         public TipoLancamento()
         {

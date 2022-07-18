@@ -1322,3 +1322,5 @@ D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\FormatoLancamento\Apagar.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\UsuarioLogin\Index.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\UsuarioLogin\Criar.cshtml.g.cs
+D:\Developer\Gerenciamento - Finanças\GerFinancas\bin\Debug\net5.0\MySqlConnector.dll
+D:\Developer\Gerenciamento - Finanças\GerFinancas\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
