@@ -32,7 +32,8 @@ namespace GerFinancas.Models
 
         [Required(ErrorMessage = "Selecione o perfil do usuário!")]
         public PerfilEnum Perfil { get; set; }
-       
+
+        [Display(Name = "Data de Cadastro")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataCadastro { get; set; }

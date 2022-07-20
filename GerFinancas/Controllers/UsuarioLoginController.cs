@@ -25,6 +25,11 @@ namespace GerFinancas.Controllers
         {
             return View();
         }
+        public IActionResult Editar(int codigo)
+        {
+            UsuarioLogin usuarioLogin = _usuarioLoginServicos.ListarUsuarioPorCodigo(codigo);
+            return View(usuarioLogin);
+        }
         [HttpPost]
         public IActionResult Salvar(UsuarioLogin usuarioLogin)
         {
@@ -36,6 +41,16 @@ namespace GerFinancas.Controllers
             {
                 _usuarioLoginServicos.Atualizar(usuarioLogin);
             }
+            return RedirectToAction("Index");
+        }
+        public IActionResult Apagar(int codigo)
+        {
+            UsuarioLogin usuarioLogin = _usuarioLoginServicos.ListarUsuarioPorCodigo(codigo);
+            return View(usuarioLogin);
+        }
+        public IActionResult ApagarConfirma(int codigo)
+        {
+            _usuarioLoginServicos.Apagar(codigo);
             return RedirectToAction("Index");
         }
     }
