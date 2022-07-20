@@ -50,7 +50,7 @@
                         @Html.DisplayFor(modelItem => item.Email)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Perfil)
+                        @(item.Perfil == GerFinancas.Enums.PerfilEnum.Administrador ? "Administrador" : "Padrão")
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.DataCadastro)
