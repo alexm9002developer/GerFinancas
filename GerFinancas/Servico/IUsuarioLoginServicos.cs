@@ -8,6 +8,7 @@ namespace GerFinancas.Servico
 {
     public interface IUsuarioLoginServicos
     {
+        UsuarioLogin BuscarPorLogin(string Login);
         UsuarioLogin ListarUsuarioPorCodigo(int Codigo);
         List<UsuarioLogin> BuscarTodos();
         UsuarioLogin Adicionar(UsuarioLogin usuarioLogin);

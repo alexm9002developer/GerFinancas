@@ -23,6 +23,12 @@ namespace GerFinancas.Servico
             _gerFinancasContext.SaveChanges();
             return usuarioLogin;
         }
+
+        public UsuarioLogin BuscarPorLogin(string login)
+        {
+            return _gerFinancasContext.UsuarioLogin.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
+        }
+
         public UsuarioLogin ListarUsuarioPorCodigo(int codigo)
         {
             return _gerFinancasContext.UsuarioLogin.FirstOrDefault(x => x.Codigo == codigo);

@@ -7,8 +7,27 @@
 <h1>Cadastro de Cartões</h1>
 
 <p>
-    <a asp-controller="Cartoes" asp-action="Criar" class="btn btn-primary">Inserir novo cartão</a>
+    <a asp-controller="Cartoes" asp-action="Criar" class="btn btn-primary" border-radius: 30px;>Inserir novo cartão</a>
 </p>
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+<div class="alert alert-danger" role="alert">
+    <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+    @TempData["MensagemErro"]
+</div>
+}
+
+
+
 
 <table class="table" id="TableCartoes">
     <thead>
@@ -65,6 +84,7 @@
                     </td>
                     -->
                 </tr>
+
             }
         }
         else

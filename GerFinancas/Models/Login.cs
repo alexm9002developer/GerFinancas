@@ -10,11 +10,11 @@ namespace GerFinancas.Models
     public class Login
     {
         [Display(Name = "Login")]
-        [Required(ErrorMessage = "Informe seu login!")]
+        [Required(ErrorMessage = "Informe o login!")]
         public string LoginUsuario { get; set; }
 
         [Display(Name = "Senha")]
-        [Required(ErrorMessage = "Informe sua senha!")]
+        [Required(ErrorMessage = "Informe a senha!")]
         public string Senha { get; set; }
     }
 }

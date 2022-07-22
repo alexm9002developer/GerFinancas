@@ -55,15 +55,24 @@ namespace GerFinancas.Controllers
         [HttpPost]
         public IActionResult Salvar(Cartoes cartoes)
         {
-            if (cartoes.Codigo == 0)
+            try
             {
-                _cartoesServicos.Adicionar(cartoes);
+                if (cartoes.Codigo == 0)
+                {
+                    _cartoesServicos.Adicionar(cartoes);
+                    TempData["MensagemSucesso"] = "Cartão cadastrado com sucesso";
+                }
+                else
+                {
+                    _cartoesServicos.Atualizar(cartoes);
+                }
+                return RedirectToAction("index");
             }
-            else
+            catch (Exception erro)
             {
-                _cartoesServicos.Atualizar(cartoes);
+                TempData["MensagemErro"] = $"Ocorreu um erro. Cartão não cadastrado. Tente novamente! Detalhe do erro: {erro.Message}";
+                return RedirectToAction("index");
             }
-            return RedirectToAction("index");
         }
 
 

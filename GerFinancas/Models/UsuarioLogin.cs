@@ -43,6 +43,10 @@ namespace GerFinancas.Models
 
         [Display(Name = "Data de Alteração")]
         public DateTime? DataAlteracao { get; set; }
+        public bool SenhaValida(string senha)
+        {
+            return Senha == senha;
+        }
 
         public UsuarioLogin()
         {
