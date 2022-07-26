@@ -5,9 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using GerFinancas.Models;
 using GerFinancas.Servico;
+using GerFinancas.Filters;
 
 namespace GerFinancas.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class CartoesController : Controller
     {
         private readonly ICartoesServicos _cartoesServicos;

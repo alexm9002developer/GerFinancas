@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 namespace GerFinancas.Controllers
 {
     [PaginaParaUsuarioLogado]
-    public class LancamentosController : Controller
+    public class RestritoController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-        
     }
 }

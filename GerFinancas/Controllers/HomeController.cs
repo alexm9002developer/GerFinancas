@@ -1,4 +1,5 @@
-﻿using GerFinancas.Models;
+﻿using GerFinancas.Filters;
+using GerFinancas.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace GerFinancas.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class HomeController : Controller
     {
      

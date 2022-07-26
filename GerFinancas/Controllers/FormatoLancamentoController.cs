@@ -6,9 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GerFinancas.Controllers;
+using GerFinancas.Filters;
 
 namespace GerFinancas.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class FormatoLancamentoController : Controller
     {
         private readonly IFormatoLancamentoServicos _formatoLancamentoServicos;

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using GerFinancas.Models;
 using GerFinancas.Servico;
 using GerFinancas.Controllers;
-
+using GerFinancas.Filters;
 
 namespace GerFinancas.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class TipoLancamentoController : Controller
     {
         private readonly ITipoLancamentoServicos _tipoLancamentoServicos;

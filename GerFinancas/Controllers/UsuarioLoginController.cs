@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 using GerFinancas.Models;
 using GerFinancas.Servico;
 using GerFinancas.Controllers;
+using GerFinancas.Filters;
 
 namespace GerFinancas.Controllers
 {
+    [PaginaRestritaSomenteAdmin]
     public class UsuarioLoginController : Controller
     {
         private readonly IUsuarioLoginServicos _usuarioLoginServicos;
