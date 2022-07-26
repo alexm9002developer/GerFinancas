@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using GerFinancas.Data;
 using Microsoft.EntityFrameworkCore;
 using GerFinancas.Servico;
+using Microsoft.AspNetCore.Http;
+using GerFinancas.Acesso;
 
 namespace GerFinancas
 {
@@ -33,10 +35,18 @@ namespace GerFinancas
             //, Configuration.GetConnectionString("DataBase"));
 
             //Linhas 31 e 32 configuram a comunicação com o servidor.
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<ICartoesServicos, CartoesServico>();
             services.AddScoped<ITipoLancamentoServicos, TipoLancamentoServicos>();
             services.AddScoped<IFormatoLancamentoServicos, FormatoLancamentoServicos>();
             services.AddScoped<IUsuarioLoginServicos, UsuarioLoginServicos>();
+            services.AddScoped<ISessao, Sessao>();
+            services.AddSession(o =>
+            {
+                o.Cookie.HttpOnly = true;
+                o.Cookie.IsEssential = true;
+            });
         }
 
         /*public void ConfigureServices(IServiceCollection services)
@@ -69,6 +79,8 @@ namespace GerFinancas
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
