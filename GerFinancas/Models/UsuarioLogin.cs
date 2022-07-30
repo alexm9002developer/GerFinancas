@@ -1,4 +1,5 @@
-﻿using GerFinancas.Enums;
+﻿using GerFinancas.Acesso;
+using GerFinancas.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -45,7 +46,12 @@ namespace GerFinancas.Models
         public DateTime? DataAlteracao { get; set; }
         public bool SenhaValida(string senha)
         {
-            return Senha == senha;
+            return Senha == senha.GerarHash();
+        }
+
+        public void SetSenhaHash()
+        {
+            Senha = Senha.GerarHash();
         }
 
         public UsuarioLogin()

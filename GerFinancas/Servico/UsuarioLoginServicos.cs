@@ -19,6 +19,7 @@ namespace GerFinancas.Servico
             // Gravar no banco de dados
             usuarioLogin.DataCadastro = DateTime.Now;
             usuarioLogin.DataAlteracao = DateTime.Now;
+            usuarioLogin.SetSenhaHash();
             _gerFinancasContext.UsuarioLogin.Add(usuarioLogin);
             _gerFinancasContext.SaveChanges();
             return usuarioLogin;
