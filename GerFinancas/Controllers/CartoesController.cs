@@ -35,6 +35,7 @@ namespace GerFinancas.Controllers
         public IActionResult ApagarConfirma(int codigo)
         {
             _cartoesServicos.Apagar(codigo);
+            TempData["MensagemSucesso"] = "Cartão excluído com sucesso!";
             return RedirectToAction("index");
         }
         public IActionResult Apagar(int codigo)
@@ -67,6 +68,7 @@ namespace GerFinancas.Controllers
                 else
                 {
                     _cartoesServicos.Atualizar(cartoes);
+                    TempData["MensagemSucesso"] = "Cartão alterado com sucesso!";
                 }
                 return RedirectToAction("index");
             }
@@ -82,6 +84,7 @@ namespace GerFinancas.Controllers
         public IActionResult Alterar(Cartoes cartoes)
         {
             _cartoesServicos.Atualizar(cartoes);
+            TempData["MensagemSucesso"] = "Cartão alterado com sucesso!";
             return RedirectToAction("index");
         }
     }

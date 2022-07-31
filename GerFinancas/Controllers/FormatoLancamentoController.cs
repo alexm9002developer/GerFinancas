@@ -40,6 +40,7 @@ namespace GerFinancas.Controllers
         public IActionResult ApagarConfirma(int codigo)
         {
             _formatoLancamentoServicos.Apagar(codigo);
+            TempData["MensagemSucesso"] = "Formato de Lançamento excluído com sucesso!";
             return RedirectToAction("Index");
         }
         [HttpPost]
@@ -48,10 +49,12 @@ namespace GerFinancas.Controllers
             if (formatoLancamento.Codigo == 0)
             {
                 _formatoLancamentoServicos.Adicionar(formatoLancamento);
+                TempData["MensagemSucesso"] = "Formato de Lançamento cadastrado com sucesso!";
             }
             else
             {
                 _formatoLancamentoServicos.Atualizar(formatoLancamento);
+                TempData["MensagemSucesso"] = "Formato de Lançamento alterado com sucesso!";
             }
             return RedirectToAction("Index");
         }

@@ -38,10 +38,12 @@ namespace GerFinancas.Controllers
             if (usuarioLogin.Codigo == 0)
             {
                 _usuarioLoginServicos.Adicionar(usuarioLogin);
+                TempData["MensagemSucesso"] = "Usuário adicionado com sucesso!";
             }
             else
             {
                 _usuarioLoginServicos.Atualizar(usuarioLogin);
+                TempData["MensagemSucesso"] = "Usuário alterado com sucesso!";
             }
             return RedirectToAction("Index");
         }
@@ -53,6 +55,7 @@ namespace GerFinancas.Controllers
         public IActionResult ApagarConfirma(int codigo)
         {
             _usuarioLoginServicos.Apagar(codigo);
+            TempData["MensagemSucesso"] = "Usuário excluído com sucesso!";
             return RedirectToAction("Index");
         }
     }
