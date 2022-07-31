@@ -29,6 +29,12 @@ namespace GerFinancas.Servico
         {
             return _gerFinancasContext.UsuarioLogin.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
         }
+        public bool AutenticaUsuario(string Login, string Senha)
+        {
+            UsuarioLogin usuario = BuscarPorLogin(Login);
+            return (usuario.Senha == Senha);
+        }
+
         public UsuarioLogin BuscarPorEmailELogin(string email, string login)
         {
             return _gerFinancasContext.UsuarioLogin.FirstOrDefault(x => x.Email.ToUpper() == email.ToUpper() && x.Login.ToUpper() == login.ToUpper());
@@ -52,7 +58,7 @@ namespace GerFinancas.Servico
             usuarioLoginDB.Nome = usuarioLogin.Nome;
             usuarioLoginDB.Login = usuarioLogin.Login;
             usuarioLoginDB.Email = usuarioLogin.Email;
-            usuarioLoginDB.Senha = usuarioLogin.Senha;
+            //usuarioLoginDB.Senha = usuarioLogin.Senha;
             usuarioLoginDB.Perfil = usuarioLogin.Perfil;
             usuarioLoginDB.DataAlteracao = DateTime.Now;
             _gerFinancasContext.UsuarioLogin.Update(usuarioLoginDB);

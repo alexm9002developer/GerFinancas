@@ -16,5 +16,6 @@ namespace GerFinancas.Servico
         UsuarioLogin Atualizar(UsuarioLogin usuarioLogin);
         UsuarioLogin AlterarSenha(AlterarSenha alterarSenha);
         bool Apagar(int codigo);
+        bool AutenticaUsuario(string Login, string Senha);
     }
 }
