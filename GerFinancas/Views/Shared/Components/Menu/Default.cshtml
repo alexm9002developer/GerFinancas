@@ -11,13 +11,14 @@
         <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="TipoLancamento" asp-action="Index">Tipo de Lançamento</a></li>
         <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="FormatoLancamento" asp-action="Index">Formato de Lançamento</a></li>
         <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Cartoes" asp-action="Index">Cartões</a></li>
-        
+
         @if (Model.Perfil == GerFinancas.Enums.PerfilEnum.Administrador)
-        { 
+        {
             <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="UsuarioLogin" asp-action="Index">Usuários</a></li>
         }
 
         <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Lancamentos" asp-action="Index">Lançamentos</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="AlterarSenha" asp-action="Index">Alterar Senha</a></li>
         <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a></li>
     </ul>
 </div>

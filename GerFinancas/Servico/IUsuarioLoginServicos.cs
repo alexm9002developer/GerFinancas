@@ -14,6 +14,7 @@ namespace GerFinancas.Servico
         List<UsuarioLogin> BuscarTodos();
         UsuarioLogin Adicionar(UsuarioLogin usuarioLogin);
         UsuarioLogin Atualizar(UsuarioLogin usuarioLogin);
+        UsuarioLogin AlterarSenha(AlterarSenha alterarSenha);
         bool Apagar(int codigo);
     }
 }

@@ -1,0 +1,57 @@
+﻿@model GerFinancas.Models.AlterarSenha
+@using GerFinancas.Enums
+
+@{
+    ViewData["Title"] = "Alterar Senha do Usuário";
+}
+
+<h1>Alterar Senha do Usuário</h1>
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="AlterarSenha" asp-action="Alterar" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label for="senhaAtual" class="control-label">Senha Atual</label>
+                <input type="password" asp-for="SenhaAtual" class="form-control" />
+                @Html.ValidationMessageFor(x => x.SenhaAtual, "", new { @style = "color : red" })
+            </div>
+            <div class="form-group">
+                <label for="novaSenha" class="control-label">Nova Senha</label>
+                <input type="password" asp-for="NovaSenha" class="form-control" />
+                @Html.ValidationMessageFor(x => x.NovaSenha, "", new { @style = "color : red" })
+            </div>
+            <div class="form-group">
+                <label for="confirmarSenha" class="control-label">Confirmar Nova Senha</label>
+                <input type="password" asp-for="ConfirmarNovaSenha" class="form-control" />
+                @Html.ValidationMessageFor(x => x.ConfirmarNovaSenha, "", new { @style = "color : red" })
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Alterar" class="btn btn-primary" />
+                <a class="btn btn-secondary" asp-controller="Home" asp-action="Index" role="button">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
