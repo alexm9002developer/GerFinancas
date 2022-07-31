@@ -42,6 +42,7 @@ namespace GerFinancas
             services.AddScoped<IFormatoLancamentoServicos, FormatoLancamentoServicos>();
             services.AddScoped<IUsuarioLoginServicos, UsuarioLoginServicos>();
             services.AddScoped<ISessao, Sessao>();
+            services.AddScoped<IEmail, Email>();
             services.AddSession(o =>
             {
                 o.Cookie.HttpOnly = true;

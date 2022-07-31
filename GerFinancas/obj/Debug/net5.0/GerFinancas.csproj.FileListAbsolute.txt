@@ -1330,3 +1330,4 @@ D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Shared\_LayoutDeslogada.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
 D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Restrito\Index.cshtml.g.cs
+D:\Developer\Gerenciamento - Finanças\GerFinancas\obj\Debug\net5.0\Razor\Views\Login\RedefinirSenha.cshtml.g.cs

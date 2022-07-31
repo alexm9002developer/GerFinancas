@@ -29,6 +29,10 @@ namespace GerFinancas.Servico
         {
             return _gerFinancasContext.UsuarioLogin.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
         }
+        public UsuarioLogin BuscarPorEmailELogin(string email, string login)
+        {
+            return _gerFinancasContext.UsuarioLogin.FirstOrDefault(x => x.Email.ToUpper() == email.ToUpper() && x.Login.ToUpper() == login.ToUpper());
+        }
 
         public UsuarioLogin ListarUsuarioPorCodigo(int codigo)
         {
