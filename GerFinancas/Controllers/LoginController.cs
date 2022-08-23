@@ -91,7 +91,7 @@ namespace GerFinancas.Controllers
                         }
                         else
                         {
-                            TempData["MensagemErro"] = $"Não foi possível enviar o e-mail. Por favor, tente novamente.";
+                            TempData["MensagemErro"] = $"Não foi possível enviar o e-mail. Por favor, tente novamente. Erro: " + _email.mensagemErro;
                         }
                         
                         return RedirectToAction("Index", "Login");

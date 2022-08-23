@@ -11,6 +11,7 @@ namespace GerFinancas.Acesso
     public class Email : IEmail
     {
         private readonly IConfiguration _configuration;
+        public string mensagemErro { get; set; }
         public Email(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -47,7 +48,8 @@ namespace GerFinancas.Acesso
             }
             catch (System.Exception ex)
             {
-                //Gravar log de erro ao enviar o e-mail 
+                mensagemErro = ex.Message;
+                //Gravar log de erro ao enviar o e-mail
                 return false;
             }
         }

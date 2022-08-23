@@ -8,5 +8,6 @@ namespace GerFinancas.Acesso
     public interface IEmail
     {
         bool Enviar(string email, string assunto, string mensagem);
+        public string mensagemErro { get; set; }
     }
 }

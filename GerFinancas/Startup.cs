@@ -34,7 +34,7 @@ namespace GerFinancas
             options.UseMySql(connectionString: Configuration.GetConnectionString("DataBase"), new MySqlServerVersion(new Version(5, 6, 41)), builder => builder.MigrationsAssembly("GerFinancas")));
             //, Configuration.GetConnectionString("DataBase"));
 
-            //Linhas 31 e 32 configuram a comunicação com o servidor.
+            //Linhas 32 e 33 configuram a comunicação com o servidor.
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<ICartoesServicos, CartoesServico>();

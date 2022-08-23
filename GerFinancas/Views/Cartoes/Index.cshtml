@@ -20,10 +20,10 @@
 
 @if (TempData["MensagemErro"] != null)
 {
-<div class="alert alert-danger" role="alert">
-    <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
-    @TempData["MensagemErro"]
-</div>
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" aria-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
 }
 
 
@@ -63,7 +63,11 @@
                         @Html.DisplayFor(modelItem => item.Descricao)
                     </td>
                     <td>
+                        <!--onKeyPress="return(moeda(this,'.',',',event))"-->
                         @Html.DisplayFor(modelItem => item.Limite)
+                        <!--
+                        var f = atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+                        -->
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.DiaVencimento)
